@@ -32,6 +32,11 @@ spec:
             configMapKeyRef:
               name: app1-configmap
               key: ndays
+        - name: RAILS_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: app1-configmap
+              key: rails-env 
         - name: API_KEY
           valueFrom:
             secretKeyRef:

@@ -5,3 +5,4 @@ metadata:
 data:
   ticker: "MSFT"
   ndays: "7"
+  rails-env: "production"
