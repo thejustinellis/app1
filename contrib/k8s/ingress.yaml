@@ -1,0 +1,8 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app1-ingress
+spec:
+  backend:
+    serviceName: app1 
+    servicePort: 4567 
