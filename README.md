@@ -4,6 +4,7 @@ This is a basic ruby application that pulls time series data from Alphavantage o
 # Things left to do
 - [] add rspec tests
 - [] split out ruby environments to allow for customization between them
+- [x] add autobuild to dockerhub to build latest tag on merge into 'main' branch 
 
 # Pre-Requisites
 - a functional installation of Ruby (this was built and tested with 2.6)
@@ -12,7 +13,7 @@ This is a basic ruby application that pulls time series data from Alphavantage o
 
 # Usage
 ## Building the Docker Image
-The Dockerfile is held here: [Dockerfile](contrib/docker/Dockerfile).  To build your own version of this, the following command can be run from the root of the repository. :
+The Dockerfile is held here: [Dockerfile](contrib/docker/Dockerfile).  To build your own version of this, the following command can be run from the root of the repository. Existing images can be found [here](https://hub.docker.com/repository/docker/thejustinellis/demoapp-fr).  Autobuild uses the latest tag (not ideal for versioning, but it will work for this scenario):
 * ```docker build -t $REPO:$TAG . -f contrib/docker/Dockerfile```
 * ```docker push $REPO:$TAG```
 
