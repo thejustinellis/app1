@@ -1,9 +1,8 @@
 # app1
-============
 This is a basic ruby application that pulls time series data from Alphavantage over a period of days, returns the closing costs and average closing price.
 
 # Pre-Requisites
-- a functional installation of Ruby 2.6
+- a functional installation of Ruby (this was built and tested with 2.6)
 - docker (only necessary for building your own version)
 - bundler (a ruby gem)
 
@@ -18,4 +17,5 @@ Included in this repository are kubernetes resource definitions for deploying th
 
 ## Verifying the application
 The above deployment creates the deployment, configmap, secret, and ingress resources needed for this application to run.  To verify it is working as intended, you can make a request to the ingress resource and expect a response similar to:
-```{"2021-04-14":"255.5900","2021-04-13":"258.4900","2021-04-12":"255.9100","2021-04-09":"255.8500","average":256.46}```
+```curl http://$INGRESS_IP
+{"2021-04-14":"255.5900","2021-04-13":"258.4900","2021-04-12":"255.9100","2021-04-09":"255.8500","average":256.46}```
