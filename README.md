@@ -25,7 +25,7 @@ These instructions assume you have a functional version of ruby installed.  The 
 
 ## Deploying the application 
 Included in this repository are kubernetes resource definitions for deploying this application to a kube cluster.  To deploy this to a kube cluster, run the following command.
-```kubernetes create -k contrib/k8s/```
+```kubernetes create -f contrib/k8s/```
 There are variables set by default in the deployment, they're all set via a configmap located here [configmap](contrib/k8s/configmap.yaml).  Here's a brief description of what each variable does:
 * NDAYS (number of days to pull data for)
 * TICKER (stock ticker to pull data for)
