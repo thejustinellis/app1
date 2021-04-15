@@ -9,7 +9,14 @@ This is a basic ruby application that pulls time series data from Alphavantage o
 # Usage
 ## Building the Docker Image
 The Dockerfile is held here: [Dockerfile](contrib/docker/Dockerfile).  To build your own version of this, the following command can be run from the root of the repository. :
-```docker build -t $REPO:$TAG . -f contrib/docker/Dockerfile```
+* ```docker build -t $REPO:$TAG . -f contrib/docker/Dockerfile```
+* ```docker push $REPO:$TAG```
+
+## Running the application locally
+These instructions assume you have a functional version of ruby installed.  The following commands will run the application locally in development mode.  
+* ```gem install bundler```
+* ```bundle install```
+* ```bundle exec puma```
 
 ## Deploying the application 
 Included in this repository are kubernetes resource definitions for deploying this application to a kube cluster.  To deploy this to a kube cluster, run the following command.
