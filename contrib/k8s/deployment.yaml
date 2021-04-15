@@ -32,6 +32,11 @@ spec:
             configMapKeyRef:
               name: app1-configmap
               key: ndays
+        - name: ALPHAVANTAGE_URL 
+          valueFrom:
+            configMapKeyRef:
+              name: app1-configmap
+              key: alphavantage-url
         - name: RAILS_ENV
           valueFrom:
             configMapKeyRef:

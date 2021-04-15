@@ -1,6 +1,6 @@
 class AlphaVantage::Client
   include HTTParty
-  base_uri 'https://www.alphavantage.co'
+  base_uri "ENV['ALPHAVANTAGE_URL']" 
   #debug_output $stdout
   ## as this is a super simple GET request, i didn't build the full client
   ## if needed, this can be extended

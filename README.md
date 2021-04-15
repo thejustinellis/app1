@@ -29,6 +29,7 @@ Included in this repository are kubernetes resource definitions for deploying th
 There are variables set by default in the deployment, they're all set via a configmap located here [configmap](contrib/k8s/configmap.yaml).  Here's a brief description of what each variable does:
 * NDAYS (number of days to pull data for)
 * TICKER (stock ticker to pull data for)
+* ALPHAVANTAGE_URL (url to consume for data)
 
 ## Verifying the application
 The above deployment creates the deployment, configmap, secret, and ingress resources needed for this application to run.  To verify it is working as intended, you can make a request to the ingress resource and expect a response similar to:
