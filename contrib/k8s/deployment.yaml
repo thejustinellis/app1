@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1 
+  labels:
+    app: app1 
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+      - name: app1
+        image: thejustinellis/demoapp-fr:0.1
+        ports:
+        - containerPort: 4567 
+        env:
+        - name: NDAYS
+          valueFrom:
+            configMapKeyRef:
+              name: app1-configmap
+              key: ndays
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app1-api-key
+              key: api-key
+        - name: TICKER
+          valueFrom:
+            configMapKeyRef:
+              name: app1-configmap
+              key: ticker
