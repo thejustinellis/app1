@@ -1,6 +1,10 @@
 # app1
 This is a basic ruby application that pulls time series data from Alphavantage over a period of days, returns the closing costs and average closing price.
 
+# Things left to do
+- [] add rspec tests
+- [] split out ruby environments to allow for customization between them
+
 # Pre-Requisites
 - a functional installation of Ruby (this was built and tested with 2.6)
 - docker (only necessary for building your own version)
